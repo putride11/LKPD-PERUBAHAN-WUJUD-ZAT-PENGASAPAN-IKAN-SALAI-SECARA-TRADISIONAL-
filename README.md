@@ -1,1 +1,401 @@
 # LKPD-PERUBAHAN-WUJUD-ZAT-PENGASAPAN-IKAN-SALAI-SECARA-TRADISIONAL-
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LKPD Digital IPAS – Pengasapan Ikan Salai Minangkabau</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --amber:#e07b39;--amber-dark:#b85c1a;--amber-light:#f4a35a;
+    --smoke:#8b6f5e;--cream:#fdf6ed;--brown:#3d1f0d;--brown-light:#6b3a1f;
+    --teal:#2a7c6f;--teal-light:#3ba08f;--gold:#d4a017;
+    --red:#c0392b;--green:#27ae60;--bg:#fdf6ed;
+    --shadow:0 4px 20px rgba(61,31,13,.12);--radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--brown);min-height:100vh;
+    background-image:radial-gradient(circle at 10% 20%,rgba(224,123,57,.07) 0%,transparent 50%),
+    radial-gradient(circle at 90% 80%,rgba(42,124,111,.07) 0%,transparent 50%);}
+
+  /* HEADER */
+  .header{background:linear-gradient(135deg,var(--brown) 0%,var(--brown-light) 60%,var(--amber-dark) 100%);color:white;position:relative;overflow:hidden;}
+  .header::before{content:'';position:absolute;inset:0;
+    background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+  .hinner{max-width:860px;margin:0 auto;padding:36px 24px 28px;position:relative;z-index:1;}
+  .hbadge{display:inline-block;background:var(--amber);color:white;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:14px;}
+  .header h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:8px;}
+  .hsub{font-size:1rem;opacity:.85;margin-bottom:20px;font-weight:600;}
+  .hmeta{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:white;font-size:12px;font-weight:700;padding:5px 13px;border-radius:20px;}
+
+  .sec{max-width:860px;margin:22px auto 0;padding:0 16px;}
+  .main{max-width:860px;margin:0 auto;padding:0 16px 60px;}
+
+  .card{background:white;border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);}
+  .c-amber{border-left:5px solid var(--amber);}
+  .c-gold{border-left:5px solid var(--gold);}
+  .clabel{font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;}
+  .c-amber .clabel{color:var(--amber-dark);}
+  .c-gold .clabel{color:#9a700a;}
+
+  .cteal{background:linear-gradient(135deg,var(--teal),var(--teal-light));color:white;border-radius:var(--radius);padding:22px 24px;}
+  .cteal .clabel{color:rgba(255,255,255,.75);font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;}
+  .tlist{list-style:none;}
+  .tlist li{display:flex;align-items:flex-start;gap:10px;padding:6px 0;font-size:13.5px;font-weight:600;line-height:1.5;border-bottom:1px solid rgba(255,255,255,.12);}
+  .tlist li:last-child{border-bottom:none;}
+  .tnum{min-width:24px;height:24px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;margin-top:1px;}
+
+  .igrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .field label{display:block;font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--smoke);margin-bottom:5px;}
+  .field input{width:100%;border:2px solid #e8ddd3;border-radius:10px;padding:9px 13px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:600;color:var(--brown);background:var(--cream);outline:none;transition:border-color .2s;}
+  .field input:focus{border-color:var(--amber);}
+
+  .plist{list-style:none;counter-reset:p;}
+  .plist li{counter-increment:p;display:flex;align-items:flex-start;gap:10px;padding:5px 0;font-size:13.5px;font-weight:600;}
+  .plist li::before{content:counter(p);min-width:24px;height:24px;background:var(--gold);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;flex-shrink:0;}
+
+  .wacana{background:linear-gradient(135deg,#fff8f0,#fdf0e0);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow);border:2px solid #f0d9c0;position:relative;overflow:hidden;}
+  .wacana::before{content:'🐟';position:absolute;top:16px;right:20px;font-size:48px;opacity:.13;}
+  .badge{display:inline-block;background:var(--amber);color:white;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:12px;}
+  .wtitle{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--amber-dark);margin-bottom:14px;}
+  .wtext{font-size:14px;line-height:1.85;font-weight:600;}
+  .dialog-line{display:grid;grid-template-columns:90px 1fr;gap:8px;margin-bottom:8px;}
+  .speaker{font-weight:800;font-size:13px;color:var(--amber-dark);padding-top:6px;}
+  .speech{font-size:13.5px;font-weight:600;font-style:italic;background:rgba(224,123,57,.08);border-left:3px solid var(--amber-light);padding:6px 10px;border-radius:0 8px 8px 0;}
+
+  .scard{background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-top:22px;opacity:0;transform:translateY(18px);transition:opacity .5s,transform .5s;}
+  .scard.visible{opacity:1;transform:translateY(0);}
+  .shead{padding:16px 24px;display:flex;align-items:center;gap:12px;}
+  .sicon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+  .stepnum{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.7;margin-bottom:2px;}
+  .shead h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;line-height:1.2;}
+  .sbody{padding:20px 24px;}
+  .s1 .shead{background:linear-gradient(135deg,#fff3e8,#ffe0c0);}
+  .s1 .sicon{background:var(--amber);color:white;}
+  .s2 .shead{background:linear-gradient(135deg,#e8f5f2,#c8eae5);}
+  .s2 .sicon{background:var(--teal);color:white;}
+
+  .ltable{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0;}
+  .ltable th{background:var(--brown);color:white;padding:10px 12px;text-align:left;font-weight:800;font-size:12px;}
+  .ltable th:first-child{border-radius:8px 0 0 0;}
+  .ltable th:last-child{border-radius:0 8px 0 0;}
+  .ltable td{padding:10px 12px;border-bottom:1px solid #f0e8df;vertical-align:middle;font-weight:600;}
+  .ltable tr:nth-child(even) td{background:#fdf5ed;}
+  .ltable td:first-child{font-weight:800;color:var(--amber-dark);text-align:center;width:36px;}
+
+  .inp{width:100%;border:2px solid #e0d0c0;border-radius:8px;padding:7px 10px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;color:var(--brown);background:white;outline:none;transition:border-color .2s,box-shadow .2s;}
+  .inp:focus{border-color:var(--amber);box-shadow:0 0 0 3px rgba(224,123,57,.12);}
+  .inp.ok{border-color:var(--green);background:#f0fff4;}
+  .inp.err{border-color:var(--red);background:#fff5f5;}
+  textarea.inp{resize:vertical;min-height:80px;}
+
+  .drag-area{display:flex;flex-direction:column;gap:10px;margin:14px 0;}
+  .drag-item{display:flex;align-items:center;gap:12px;background:white;border:2px solid #e0d0c0;border-radius:10px;padding:10px 14px;cursor:grab;user-select:none;transition:all .2s;font-size:13.5px;font-weight:600;}
+  .drag-item:hover{border-color:var(--amber);background:#fff8f2;}
+  .drag-item.dragging{opacity:.45;cursor:grabbing;}
+  .drag-item.drag-over{border-color:var(--teal);background:#f0faf8;transform:scale(1.01);}
+  .dhandle{font-size:18px;color:#b0a098;flex-shrink:0;}
+  .dnum{min-width:28px;height:28px;background:var(--amber);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;flex-shrink:0;}
+
+  .qblock{background:var(--cream);border-radius:12px;padding:16px 18px;margin-bottom:14px;border-left:4px solid var(--teal);}
+  .qlabel{font-size:12px;font-weight:800;color:var(--teal);letter-spacing:.5px;text-transform:uppercase;margin-bottom:7px;}
+  .qtext{font-size:13.5px;font-weight:700;color:var(--brown);margin-bottom:10px;line-height:1.5;}
+
+  .sublabel{font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--smoke);margin:18px 0 8px;display:flex;align-items:center;gap:8px;}
+  .sublabel::after{content:'';flex:1;height:2px;background:linear-gradient(to right,#e0d0c0,transparent);border-radius:2px;}
+
+  .wdiag{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin:14px 0;padding:16px;background:linear-gradient(135deg,#fff8f0,#fdf0e0);border-radius:12px;}
+  .wbox{background:white;border-radius:10px;padding:10px 16px;text-align:center;font-weight:800;font-size:13px;border:2px solid #e0d0c0;min-width:80px;}
+  .warrow{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;font-weight:700;color:var(--amber-dark);text-align:center;}
+  .wasym{font-size:20px;color:var(--amber);}
+
+  .btn{padding:11px 24px;border:none;border-radius:10px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:7px;}
+  .bprimary{background:var(--amber);color:white;box-shadow:0 4px 12px rgba(224,123,57,.3);}
+  .bprimary:hover{background:var(--amber-dark);transform:translateY(-2px);}
+  .bghost{background:transparent;color:var(--smoke);border:2px solid #e0d0c0;}
+  .bghost:hover{border-color:var(--amber);color:var(--amber);}
+  .brow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+
+  .fb{margin-top:12px;border-radius:10px;padding:12px 15px;font-size:13px;font-weight:700;display:none;align-items:flex-start;gap:8px;}
+  .fb.show{display:flex;}
+  .fb.ok{background:#d4edda;color:#155724;border:1.5px solid #b8dac4;}
+  .fb.err{background:#f8d7da;color:#721c24;border:1.5px solid #f1aeb5;}
+
+  .rcard{background:white;border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);margin-top:22px;border-top:4px solid var(--gold);}
+  .rcard h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--brown);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .rblock{background:#fffdf0;border-radius:12px;padding:16px 18px;margin-bottom:14px;border-left:4px solid var(--gold);}
+  .rlabel{font-size:12px;font-weight:800;color:#9a700a;letter-spacing:.5px;text-transform:uppercase;margin-bottom:7px;}
+
+  .stars{display:flex;gap:8px;margin:10px 0 14px;}
+  .star{font-size:30px;cursor:pointer;transition:transform .15s;opacity:.3;user-select:none;}
+  .star:hover,.star.on{opacity:1;}
+  .star:hover{transform:scale(1.2);}
+
+  .progwrap{background:#f0e8df;border-radius:20px;height:8px;margin:10px 0 4px;overflow:hidden;}
+  .progfill{height:100%;background:linear-gradient(90deg,var(--amber),var(--amber-light));border-radius:20px;transition:width .6s ease;}
+
+  @media(max-width:600px){.igrid{grid-template-columns:1fr;}.dialog-line{grid-template-columns:75px 1fr;}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="hinner">
+    <div class="hbadge">📚 LKPD Digital Interaktif</div>
+    <h1>Rahasia di Balik Asap:<br>Perubahan Wujud Zat &amp; Ikan Salai</h1>
+    <div class="hsub">IPAS Kelas IV · Etnosains Minangkabau · Kurikulum Merdeka</div>
+    <div class="hmeta">
+      <span class="chip">🏫 SDN 01 Padang</span>
+      <span class="chip">📖 Fase B</span>
+      <span class="chip">⏱ 2 × 35 Menit</span>
+      <span class="chip">🌿 Kearifan Lokal</span>
+    </div>
+  </div>
+</div>
+
+<!-- IDENTITAS -->
+<div class="sec">
+  <div class="card c-amber">
+    <div class="clabel">✏️ Identitas Peserta Didik</div>
+    <div class="igrid">
+      <div class="field"><label>Nama Lengkap</label><input type="text" id="nama" placeholder="Tulis nama kamu..."></div>
+      <div class="field"><label>Nama Kelompok</label><input type="text" id="kelompok" placeholder="Kelompok..."></div>
+      <div class="field"><label>Kelas</label><input type="text" id="kelas" placeholder="Contoh: IV A"></div>
+      <div class="field"><label>Hari / Tanggal</label><input type="text" id="tanggal" placeholder="Senin, ..."></div>
+    </div>
+    <div style="margin-top:12px;">
+      <div class="field"><label>Anggota Kelompok</label><input type="text" id="anggota" placeholder="Nama 1, Nama 2, Nama 3, ..."></div>
+    </div>
+  </div>
+</div>
+
+<!-- TUJUAN -->
+<div class="sec">
+  <div class="cteal">
+    <div class="clabel">🎯 Tujuan Pembelajaran</div>
+    <ul class="tlist">
+      <li><span class="tnum">1</span>Menjelaskan tahapan pembuatan ikan salai Minangkabau secara urut dan benar (C2)</li>
+      <li><span class="tnum">2</span>Mengidentifikasi manfaat perubahan wujud zat dalam pengawetan makanan (C3)</li>
+      <li><span class="tnum">3</span>Membedakan jenis-jenis perubahan wujud zat yang terjadi saat pengasapan ikan salai (C2)</li>
+      <li><span class="tnum">4</span>Menerapkan pemahaman perubahan wujud zat untuk menjelaskan manfaat tradisi pengawetan (C3)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PETUNJUK -->
+<div class="sec">
+  <div class="card c-gold">
+    <div class="clabel">📋 Petunjuk Pengerjaan</div>
+    <ol class="plist">
+      <li>Berdoalah sebelum memulai mengerjakan LKPD ini</li>
+      <li>Baca dan pahami setiap petunjuk serta pertanyaan dengan teliti</li>
+      <li>Diskusikan setiap jawaban bersama teman kelompokmu</li>
+      <li>Tulis jawaban dengan jelas menggunakan bahasamu sendiri</li>
+      <li>Klik tombol <strong>Cek Jawaban</strong> untuk memeriksa pekerjaanmu</li>
+      <li>Presentasikan hasil kerja kelompokmu di depan kelas</li>
+    </ol>
+  </div>
+</div>
+
+<!-- WACANA -->
+<div class="sec">
+  <div class="wacana">
+    <div class="badge">📖 Wacana Pembuka</div>
+    <div class="wtitle">"Mengapa Ikan Nenek Bisa Awet Berbulan-bulan Tanpa Kulkas?"</div>
+    <div class="wtext">
+      <p>Rara adalah siswi kelas IV yang sedang berlibur ke rumah neneknya di tepi Danau Singkarak, Sumatera Barat. Suatu sore, ia melihat neneknya sedang mengasapi ikan-ikan basah di atas para-para bambu. Bara api dari kayu bakar menyala stabil, dan asap tebal mengepul mengelilingi ikan-ikan yang perlahan berubah warna menjadi kecokelatan.</p>
+      <br>
+      <div class="dialog-line"><span class="speaker">Rara :</span><span class="speech">"Nek, mengapa ikan harus diasapi begitu lama? Mengapa tidak disimpan saja di kulkas?"</span></div>
+      <div class="dialog-line"><span class="speaker">Nenek :</span><span class="speech">"Ini namanya membuat ikan salai, Nak. Kalau hanya disimpan di kulkas, ikan hanya awet beberapa hari. Tapi kalau sudah diasapi begini, bisa awet sampai berbulan-bulan bahkan bisa dibawa jauh ke rantau tanpa busuk. Ini ilmu dari leluhur kita, warisan nenek moyang Minangkabau."</span></div>
+      <br>
+      <p>Rara semakin penasaran: <em>mengapa asap dan panas bisa membuat ikan awet? Apa yang terjadi pada air di dalam ikan saat dipanggang? Perubahan wujud zat apa yang sedang berlangsung?</em></p>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- DIAGRAM -->
+<div class="scard">
+  <div class="shead s1">
+    <div class="sicon" style="background:var(--amber);color:white;">💡</div>
+    <div><div class="stepnum">Ingat!</div><h3>Diagram Perubahan Wujud Zat</h3></div>
+  </div>
+  <div class="sbody">
+    <div class="wdiag">
+      <div class="wbox" style="border-color:#5b6ad6;color:#5b6ad6;">⬛ PADAT</div>
+      <div class="warrow"><span>Mencair →</span><span class="wasym">⇄</span><span>← Membeku</span></div>
+      <div class="wbox" style="border-color:var(--teal);color:var(--teal);">💧 CAIR</div>
+      <div class="warrow"><span>Menguap →</span><span class="wasym">⇄</span><span>← Mengembun</span></div>
+      <div class="wbox" style="border-color:var(--amber);color:var(--amber-dark);">💨 GAS</div>
+    </div>
+    <p style="font-size:12px;color:var(--smoke);text-align:center;font-weight:600;">✨ Menyublim: Padat → Gas &nbsp;|&nbsp; Mengkristal: Gas → Padat</p>
+  </div>
+</div>
+
+<!-- SINTAKS 1 -->
+<div class="scard s1">
+  <div class="shead s1">
+    <div class="sicon">🔍</div>
+    <div><div class="stepnum">Sintaks 1</div><h3>Orientasi pada Masalah</h3></div>
+  </div>
+  <div class="sbody">
+
+    <div class="sublabel">Langkah 1.1 — Tabel Perubahan Wujud Zat</div>
+    <p style="font-size:13.5px;font-weight:600;margin-bottom:12px;">Amati setiap peristiwa berikut! Isi kolom yang kosong dengan tepat.</p>
+    <table class="ltable">
+      <thead>
+        <tr><th>No</th><th>Peristiwa</th><th>Wujud Awal</th><th>Wujud Akhir</th><th>Nama Perubahan Wujud</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Air dalam tubuh ikan menguap saat dipanggang di atas bara api</td>
+          <td><input type="text" class="inp" id="t1a" placeholder="..."></td>
+          <td><input type="text" class="inp" id="t1b" placeholder="..."></td>
+          <td><input type="text" class="inp" id="t1c" placeholder="..."></td></tr>
+        <tr><td>2</td><td>Es batu yang dipakai menyimpan ikan segar mencair</td>
+          <td><input type="text" class="inp" id="t2a" placeholder="..."></td>
+          <td><input type="text" class="inp" id="t2b" placeholder="..."></td>
+          <td><input type="text" class="inp" id="t2c" placeholder="..."></td></tr>
+        <tr><td>3</td><td>Uap asap dari pengasapan ikan menempel di penutup panci</td>
+          <td><input type="text" class="inp" id="t3a" placeholder="..."></td>
+          <td><input type="text" class="inp" id="t3b" placeholder="..."></td>
+          <td><input type="text" class="inp" id="t3c" placeholder="..."></td></tr>
+        <tr><td>4</td><td>Ikan salai kering disimpan di tempat dingin, permukaannya berembun</td>
+          <td><input type="text" class="inp" id="t4a" placeholder="..."></td>
+          <td><input type="text" class="inp" id="t4b" placeholder="..."></td>
+          <td><input type="text" class="inp" id="t4c" placeholder="..."></td></tr>
+      </tbody>
+    </table>
+    <div class="brow">
+      <button class="btn bprimary" onclick="cekTabel()">✅ Cek Jawaban Tabel</button>
+      <button class="btn bghost" onclick="resetTabel()">🔄 Ulangi</button>
+    </div>
+    <div class="fb" id="fb-tabel"></div>
+
+    <div class="sublabel" style="margin-top:24px;">Langkah 1.2 — Urutkan Tahapan Pembuatan Ikan Salai</div>
+    <p style="font-size:13.5px;font-weight:600;margin-bottom:12px;">🖱️ <strong>Seret dan tata ulang</strong> kartu berikut menjadi urutan yang benar!</p>
+    <div class="drag-area" id="da">
+      <div class="drag-item" draggable="true" data-correct="1" data-id="d1"><span class="dhandle">⠿</span><span class="dnum" id="dn-d1">?</span><span>Ikan segar dibersihkan, sisik dan isi perut dibuang</span></div>
+      <div class="drag-item" draggable="true" data-correct="2" data-id="d2"><span class="dhandle">⠿</span><span class="dnum" id="dn-d2">?</span><span>Ikan dibelah menjadi dua agar panas dan asap meresap lebih merata</span></div>
+      <div class="drag-item" draggable="true" data-correct="3" data-id="d3"><span class="dhandle">⠿</span><span class="dnum" id="dn-d3">?</span><span>Ikan diberi garam dan bumbu rempah secara merata</span></div>
+      <div class="drag-item" draggable="true" data-correct="4" data-id="d4"><span class="dhandle">⠿</span><span class="dnum" id="dn-d4">?</span><span>Ikan dipanggang di atas bara api dengan asap selama 6–12 jam</span></div>
+      <div class="drag-item" draggable="true" data-correct="5" data-id="d5"><span class="dhandle">⠿</span><span class="dnum" id="dn-d5">?</span><span>Air dalam daging ikan menguap sehingga ikan menjadi kering dan keras</span></div>
+      <div class="drag-item" draggable="true" data-correct="6" data-id="d6"><span class="dhandle">⠿</span><span class="dnum" id="dn-d6">?</span><span>Ikan salai yang sudah kering dikemas dan siap disimpan atau dijual</span></div>
+    </div>
+    <div class="brow">
+      <button class="btn bprimary" onclick="cekUrutan()">✅ Cek Urutan</button>
+      <button class="btn bghost" onclick="acakUrutan()">🔀 Acak Ulang</button>
+    </div>
+    <div class="fb" id="fb-urutan"></div>
+  </div>
+</div>
+
+<!-- SINTAKS 2 & 3 -->
+<div class="scard s2">
+  <div class="shead s2">
+    <div class="sicon">🔬</div>
+    <div><div class="stepnum">Sintaks 2 & 3</div><h3>Mengorganisasi &amp; Penyelidikan Kelompok</h3></div>
+  </div>
+  <div class="sbody">
+    <p style="font-size:13.5px;font-weight:600;margin-bottom:16px;">📚 Baca kembali cerita Rara dan neneknya, lalu diskusikan bersama kelompokmu!</p>
+
+    <div class="qblock">
+      <div class="qlabel">Pertanyaan 1</div>
+      <div class="qtext">Perubahan wujud apakah yang paling utama terjadi saat ikan salai dipanggang di atas bara api? Jelaskan prosesnya!</div>
+      <textarea class="inp" id="q1" placeholder="Tuliskan jawaban diskusi kelompokmu..."></textarea>
+    </div>
+    <div class="qblock">
+      <div class="qlabel">Pertanyaan 2</div>
+      <div class="qtext">Mengapa ikan salai (diasap) bisa lebih tahan lama dibandingkan ikan yang hanya dijemur di bawah sinar matahari saja?</div>
+      <textarea class="inp" id="q2" placeholder="Tuliskan jawaban diskusi kelompokmu..."></textarea>
+    </div>
+    <div class="qblock">
+      <div class="qlabel">Pertanyaan 3</div>
+      <div class="qtext">Faktor apa saja <strong>(minimal 3 faktor)</strong> yang mempengaruhi kecepatan penguapan air dari tubuh ikan saat diasapi?</div>
+      <textarea class="inp" id="q3" placeholder="1. &#10;2. &#10;3. "></textarea>
+    </div>
+    <div class="qblock">
+      <div class="qlabel">Pertanyaan 4</div>
+      <div class="qtext">Selain menguap, perubahan wujud apa lagi yang mungkin terjadi selama proses pengasapan berlangsung? Berikan contohnya!</div>
+      <textarea class="inp" id="q4" placeholder="Tuliskan jawaban diskusi kelompokmu..."></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- REFLEKSI -->
+<div class="rcard">
+  <h3>🌟 Refleksi Peserta Didik</h3>
+  <div class="rblock">
+    <div class="rlabel">Refleksi 1</div>
+    <div class="qtext">Bagian mana dari materi hari ini yang kamu rasa paling sulit? Mengapa?</div>
+    <textarea class="inp" id="ref1" placeholder="Ceritakan..."></textarea>
+  </div>
+  <div class="rblock">
+    <div class="rlabel">Refleksi 2</div>
+    <div class="qtext">Hal baru apa yang kamu pelajari hari ini tentang tradisi pengasapan ikan salai Minangkabau?</div>
+    <textarea class="inp" id="ref2" placeholder="Tulis pelajaran barumu..."></textarea>
+  </div>
+  <div class="rblock">
+    <div class="rlabel">Penilaian Diri</div>
+    <div class="qtext">Beri bintang untuk menilai usahamu dalam mengerjakan LKPD ini!</div>
+    <div class="stars" id="stars">
+      <span class="star" onclick="setBintang(1)">⭐</span>
+      <span class="star" onclick="setBintang(2)">⭐</span>
+      <span class="star" onclick="setBintang(3)">⭐</span>
+      <span class="star" onclick="setBintang(4)">⭐</span>
+      <span class="star" onclick="setBintang(5)">⭐</span>
+    </div>
+    <p style="font-size:12px;color:var(--smoke);font-weight:600;" id="blabel">Klik bintang untuk memberi nilai</p>
+  </div>
+
+  <div style="background:var(--cream);border-radius:12px;padding:14px 16px;margin-bottom:16px;">
+    <div style="font-size:12px;font-weight:800;color:var(--smoke);letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;">📊 Progress Pengisian LKPD</div>
+    <div class="progwrap"><div class="progfill" id="pf" style="width:0%"></div></div>
+    <div style="font-size:12px;font-weight:700;color:var(--smoke);text-align:right;margin-top:4px;" id="pl">0% selesai</div>
+  </div>
+
+  <div class="brow">
+    <button class="btn bprimary" onclick="selesai()">🎉 Selesai & Kumpulkan</button>
+  </div>
+  <div class="fb" id="fb-selesai"></div>
+</div>
+
+</div>
+
+<script>
+const da=document.getElementById('da');let src=null;
+function initDrag(){
+  da.querySelectorAll('.drag-item').forEach(el=>{
+    el.addEventListener('dragstart',()=>{src=el;setTimeout(()=>el.classList.add('dragging'),0);});
+    el.addEventListener('dragend',()=>{el.classList.remove('dragging');da.querySelectorAll('.drag-item').forEach(i=>i.classList.remove('drag-over'));updateNum();updateProg();});
+    el.addEventListener('dragover',e=>{e.preventDefault();if(el!==src)el.classList.add('drag-over');});
+    el.addEventListener('dragleave',()=>el.classList.remove('drag-over'));
+    el.addEventListener('drop',e=>{e.preventDefault();el.classList.remove('drag-over');if(src&&el!==src){const all=[...da.querySelectorAll('.drag-item')];all.indexOf(src)<all.indexOf(el)?da.insertBefore(src,el.nextSibling):da.insertBefore(src,el);}});
+  });
+}
+function updateNum(){da.querySelectorAll('.drag-item').forEach((el,i)=>{document.getElementById('dn-'+el.dataset.id).textContent=i+1;});}
+function acakUrutan(){const items=[...da.querySelectorAll('.drag-item')];for(let i=items.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));da.insertBefore(items[j],items[i]);[items[i],items[j]]=[items[j],items[i]];}updateNum();document.getElementById('fb-urutan').className='fb';}
+function cekUrutan(){const items=[...da.querySelectorAll('.drag-item')];const ok=items.every((el,i)=>parseInt(el.dataset.correct)===i+1);const fb=document.getElementById('fb-urutan');fb.className='fb show '+(ok?'ok':'err');fb.innerHTML=ok?'<span>✅ Urutan sudah benar! Hebat!</span>':'<span>🔁 Urutan belum tepat. Pikirkan langkah paling awal — baca ulang cerita Rara!</span>';}
+initDrag();acakUrutan();
+
+const tK={t1a:['cair'],t1b:['gas'],t1c:['menguap','evaporasi'],t2a:['padat'],t2b:['cair'],t2c:['mencair','melebur'],t3a:['gas'],t3b:['cair'],t3c:['mengembun','kondensasi'],t4a:['gas'],t4b:['cair'],t4c:['mengembun','kondensasi']};
+function cekTabel(){let b=0;Object.entries(tK).forEach(([id,k])=>{const el=document.getElementById(id);const v=el.value.trim().toLowerCase();const ok=k.some(x=>v.includes(x));el.className='inp '+(ok?'ok':'err');if(ok)b++;});const fb=document.getElementById('fb-tabel');fb.className='fb show '+(b===12?'ok':'err');fb.innerHTML=b===12?'<span>🎉 Semua 12 jawaban benar! Luar biasa!</span>':'<span>📝 '+b+' dari 12 jawaban benar. Perbaiki kolom yang merah!</span>';}
+function resetTabel(){Object.keys(tK).forEach(id=>{const el=document.getElementById(id);el.value='';el.className='inp';});document.getElementById('fb-tabel').className='fb';}
+
+let bval=0;
+function setBintang(n){bval=n;document.querySelectorAll('#stars .star').forEach((s,i)=>s.classList.toggle('on',i<n));const l=['','Perlu lebih banyak usaha 💪','Cukup berusaha 👏','Usaha yang baik 🌟','Sangat berusaha 🏆','Luar biasa! Usaha terbaik! 🎉'];document.getElementById('blabel').textContent=l[n];}
+
+const pids=['t1a','t1b','t1c','t2a','t2b','t2c','t3a','t3b','t3c','t4a','t4b','t4c','q1','q2','q3','q4','ref1','ref2'];
+function updateProg(){const f=pids.filter(id=>{const el=document.getElementById(id);return el&&el.value.trim().length>2;}).length;const p=Math.round(f/pids.length*100);document.getElementById('pf').style.width=p+'%';document.getElementById('pl').textContent=p+'% selesai';}
+pids.forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('input',updateProg);});
+
+function selesai(){const nama=document.getElementById('nama').value||'Peserta Didik';const fb=document.getElementById('fb-selesai');fb.className='fb show ok';fb.innerHTML='<span>🎉 Selamat, <strong>'+nama+'</strong>! LKPD telah selesai dikerjakan. Presentasikan hasil kelompokmu di depan kelas! 🐟✨</span>';updateProg();}
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.08});
+document.querySelectorAll('.scard,.rcard').forEach(c=>obs.observe(c));
+</script>
+</body>
+</html>
